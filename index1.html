@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Resume & Bio-Data Website</title>
+
+    <!-- INTERNAL CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f2f2f2;
+        }
+
+        header {
+            background: #333;
+            padding: 15px;
+            color: #fff;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ff9900;
+        }
+
+        section {
+            background: white;
+            margin: 20px auto;
+            padding: 20px;
+            width: 80%;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px #ccc;
+        }
+
+        .biodata-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .biodata-table th,
+        .biodata-table td {
+            border: 1px solid #777;
+            padding: 10px;
+            text-align: left;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+
+    <!-- jQuery (OPTIONAL) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        // JavaScript Program (Navigation Alerts)
+        $(document).ready(function () {
+            $("nav a").click(function () {
+                alert("Opening " + $(this).text() + " section!");
+            });
+        });
+
+        // JavaScript for switching content
+        function showSection(sectionId) {
+            document.getElementById("home").style.display = "none";
+            document.getElementById("resume").style.display = "none";
+            document.getElementById("biodata").style.display = "none";
+
+            document.getElementById(sectionId).style.display = "block";
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>My Resume & Bio-Data Website</h1>
+        <nav>
+            <a href="#" onclick="showSection('home')">Home</a>
+            <a href="#" onclick="showSection('resume')">Resume</a>
+            <a href="#" onclick="showSection('biodata')">Bio-Data</a>
+        </nav>
+    </header>
+
+    <!-- HOME SECTION -->
+    <section id="home">
+        <h2>Welcome!</h2>
+        <p>
+            This is a multi-section website containing my <b>Resume</b> and <b>Bio-Data</b>, built using
+            <b>HTML + CSS + JavaScript + jQuery</b>.
+        </p>
+    </section>
+
+    <!-- RESUME SECTION -->
+    <section id="resume" style="display:none;">
+        <h2>Resume</h2>
+
+        <h3>Personal Details</h3>
+        <p><b>Name:</b> Deekshith</p>
+        <p><b>Email:</b> deekshith@example.com</p>
+        <p><b>Phone:</b> 9876543210</p>
+
+        <h3>Education</h3>
+        <ul>
+            <li>Be in CSE — 2027</li>
+            <li>PUC — 2023</li>
+            <li>SSLC — 2021</li>
+        </ul>
+
+        <h3>Skills</h3>
+        <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>Python, Java</li>
+            <li>SQL</li>
+        </ul>
+
+        <h3>Projects</h3>
+        <p><b>Portfolio Website:</b> Built a multi-page website and hosted online.</p>
+    </section>
+
+    <!-- BIO-DATA SECTION -->
+    <section id="biodata" style="display:none;">
+        <h2>Bio-Data</h2>
+
+        <table class="biodata-table">
+            <tr>
+                <th>Name</th>
+                <td>Deekshith</td>
+            </tr>
+            <tr>
+                <th>DOB</th>
+                <td>15-08-2004</td>
+            </tr>
+            <tr>
+                <th>Gender</th>
+                <td>Male</td>
+            </tr>
+            <tr>
+                <th>Father's Name</th>
+                <td>Ramesh</td>
+            </tr>
+            <tr>
+                <th>Mother's Name</th>
+                <td>ramya</td>
+            </tr>
+            <tr>
+                <th>Languages Known</th>
+                <td>Kannada, English, Hindi</td>
+            </tr>
+            <tr>
+                <th>Nationality</th>
+                <td>Indian</td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td>Bangalore, India</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 My Website | All Rights Reserved</p>
+    </footer>
+
+</body>
+
+</html>
